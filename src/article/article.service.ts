@@ -58,6 +58,7 @@ export class ArticleService {
 
     articles = (articles as any).map((a) => mapDynamicValues(userId, a));
 
+    // 1
     return { articles, articlesCount };
   }
 
@@ -126,6 +127,7 @@ export class ArticleService {
     let article: any = await this.prisma.article.findOne({
       where: { slug },
       include: articleInclude,
+
     });
 
     article = mapDynamicValues(userId, article);
