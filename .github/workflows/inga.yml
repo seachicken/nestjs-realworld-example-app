@@ -7,7 +7,7 @@ jobs:
   inga-analysis:
 
     runs-on: ubuntu-latest
-    container: ghcr.io/seachicken/inga:0.1.30-pre0-typescript
+    container: ghcr.io/seachicken/inga:0.1.33-pre0-typescript
 
     steps:
     - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -16,4 +16,4 @@ jobs:
         fetch-depth: 0
         # https://github.com/actions/checkout/issues/124
         ref: ${{ github.event.pull_request.head.ref }}
-    - run: inga --exclude "*.spec.ts" --github-token ${{ secrets.GITHUB_TOKEN }} --base-sha 6bf0dd5
+    - run: inga --exclude "*.spec.ts" --github-token ${{ secrets.GITHUB_TOKEN }}
