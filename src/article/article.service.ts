@@ -70,6 +70,9 @@ export class ArticleService {
       if (query) {
         // a
       }
+      if (query) {
+        // b
+      }
       queries.push({
         tagList: {
           contains: query.tag
