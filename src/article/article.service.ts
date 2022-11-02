@@ -71,7 +71,9 @@ export class ArticleService {
         // a
       }
       if (query) {
-        // b
+        if (query) {
+          // b
+        }
       }
       queries.push({
         tagList: {
