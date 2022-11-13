@@ -58,6 +58,7 @@ export class ArticleService {
 
     articles = (articles as any).map((a) => mapDynamicValues(userId, a));
 
+    // 1
     return { articles, articlesCount };
   }
 
@@ -66,6 +67,14 @@ export class ArticleService {
     const queries = [];
 
     if ('tag' in query) {
+      if (query) {
+        // a
+      }
+      if (query) {
+        if (query) {
+          // b
+        }
+      }
       queries.push({
         tagList: {
           contains: query.tag
@@ -125,6 +134,7 @@ export class ArticleService {
     let article: any = await this.prisma.article.findOne({
       where: { slug },
       include: articleInclude,
+
     });
 
     article = mapDynamicValues(userId, article);
